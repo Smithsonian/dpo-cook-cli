@@ -123,6 +123,13 @@ export default class CLIProcessor
                     }
                     return;
 
+                case "report":
+                    api.jobReport(arg0).then(report => {
+                        console.log(JSON.stringify(report, null, 2));
+                    })
+                    .catch(error => this.logError("get job report", error));
+                    return;
+
                 case "recipes":
                     api.listRecipes().then(info => {
                         console.log(JSON.stringify(info, null, 2));
@@ -209,6 +216,7 @@ Usage:
       cancel jobId             cancel job with given id
       delete jobId             delete job with given id
       status [jobId]           get job or machine status
+      report jobId             get report for job with given id
       recipes                  list available recipes
       recipe [recipeId]        list recipe details
       help                     print this message
