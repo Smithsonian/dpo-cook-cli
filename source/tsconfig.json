@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES2016",
+        "module": "commonjs",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+
+        "outDir": "../bin",
+        "baseUrl": "."
+    },
+    "files": [
+        "index.ts"
+    ],
+    "include": [
+        "*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

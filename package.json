@@ -1,0 +1,38 @@
+{
+  "name": "si-cook-cli",
+  "version": "0.1.0",
+  "description": "Remote Command Line Interface for the Cook 3D Processing Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run cli",
+    "cli": "node bin/index.js",
+    "build": "tsc -b source",
+    "watch": "tsc -b source -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smithsonian/dpo-cook-cli.git"
+  },
+  "contributors": [
+    {
+      "name": "Ralph Wiedemeier",
+      "url": "https://github.com/framelab"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Smithsonian/dpo-cook-cli/issues"
+  },
+  "homepage": "https://github.com/Smithsonian/dpo-cook-cli#readme",
+  "dependencies": {
+    "ajv": "^6.10.2",
+    "fs-extra": "^8.1.0",
+    "minimist": "^1.2.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "typescript": "^3.5.3"
+  }
+}
