@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+import * as os from "os";
 import * as fs from "fs";
 import * as path from "path";
 import * as minimist from "minimist";
@@ -27,8 +28,8 @@ import ApiClient, { IParameters } from "./APIClient";
 
 export default class CLIProcessor
 {
-    static readonly clientIdFilePath: string = path.resolve(__dirname, ".cook-cli-client");
-    static readonly machineAddressFilePath: string = path.resolve(__dirname, ".cook-cli-machine");
+    static readonly clientIdFilePath: string = path.resolve(os.homedir(), ".cook-cli-client");
+    static readonly machineAddressFilePath: string = path.resolve(os.homedir(), ".cook-cli-machine");
 
     protected clientId: string = "";
     protected machineAddress: string = "";
