@@ -5,11 +5,12 @@
         "sourceMap": true,
         "resolveJsonModule": true,
 
-        "outDir": "../bin",
+        "outDir": "../dist",
         "baseUrl": "."
     },
     "files": [
-        "index.ts"
+        "CLIProcessor.ts",
+        "APIClient.ts"
     ],
     "include": [
         "*"

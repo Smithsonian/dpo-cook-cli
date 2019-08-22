@@ -2,7 +2,10 @@
   "name": "si-cook-cli",
   "version": "0.1.0",
   "description": "Remote Command Line Interface for the Cook 3D Processing Service",
-  "main": "index.js",
+  "main": "bin/index.js",
+  "bin": {
+    "cook": "bin/index.js"
+  },
   "scripts": {
     "start": "npm run cli",
     "cli": "node bin/index.js",

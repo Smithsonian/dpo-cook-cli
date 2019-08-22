@@ -24,17 +24,25 @@ First, clone the repository to a location of your choice:
 git clone https://github.com/Smithsonian/dpo-cook-cli
 ```
 
-Next, install the dependencies and build the application:
+Next, install the dependencies and build the application. The last command, `npm link` adds a shortcut
+`cook` to the user's path.
 
 ```bash
 npm install
 npm run build
+npm link
+```
+
+Test the successful installation. Type the following command, and you should see the usage instructions.
+
+```bash
+cook help
 ```
 
 ### Usage
 
 ```
-npm run cli <command> [args] [parameters]
+cook <command> [args] [parameters]
 
 commands:
   machine [address]        set or get machine address

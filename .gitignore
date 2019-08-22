@@ -3,7 +3,7 @@
 .vscode/
 node_modules/
 
-bin/
+dist/
 docs/
 
 # FILES
