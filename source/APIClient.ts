@@ -17,6 +17,7 @@
 
 import * as fs from "fs-extra";
 import * as fetch from "node-fetch";
+import * as mkdirp from "mkdirp";
 
 import * as JSONValidator from "ajv";
 import { Ajv } from "ajv";
@@ -219,6 +220,15 @@ export default class ApiClient
         const endpoint = this.machineAddress + "/" + jobId + "/" + filePath;
 
         console.log(`downloading file: ${filePath}`);
+
+        // ensure target folder exists
+        const parts = filePath.split("/");
+        parts.pop();
+        const basePath = parts.join("/");
+
+        if (basePath) {
+            mkdirp(basePath);
+        }
 
         return fetch(endpoint)
             .then(result => {
